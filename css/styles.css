@@ -1,0 +1,120 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Boogaloo);
+@import url(reset.css);
+
+body {
+	margin: 10px;
+	background-image: url(../img/background.png);
+	background-repeat: no-repeat;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+
+p {
+	padding: 10px;
+}
+
+.content-box {
+	width: 80%;
+	background-color: #FFF;
+	margin: 0 auto;
+	box-shadow: 2px 2px 6px #EDE275;
+}
+
+.logo-left {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 6px gray;
+}
+
+.logo-right{
+	float: right;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 6px gray;
+}
+
+.company {
+	text-align: center;
+	font-size: 300%;
+	color: #461B7E;
+	font-family: 'Boogaloo';
+}
+
+.info {
+	text-align: center;
+}
+
+nav {
+	text-align: center;
+}
+
+nav ul {
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #461B7E;
+	box-shadow: 2px 2px 6px gray;
+}
+
+nav li {
+	display: inline-block;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+nav a {
+	display: inline-block;
+	padding: 10px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 110%;
+	color: #EDE275;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.info p {
+	padding: 2px;
+}
+
+.main {
+	margin: 10px;
+	padding-bottom: 20px;
+}
+
+.pizza1 {
+	float: left;
+	margin-right: 20px;
+	box-shadow: 2px 2px 6px gray;
+
+}
+
+.main li {
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
