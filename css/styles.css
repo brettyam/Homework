@@ -21,20 +21,21 @@ p {
 	box-shadow: 2px 2px 6px #EDE275;
 }
 
-.logo-left {
+.logo {
 	float: left;
 	margin-left: 20px;
-	margin-right: 20px;
 	margin-top: 10px;
 	box-shadow: 2px 2px 6px gray;
+	height: 17%;
+	width: 17%;
 }
 
-.logo-right{
+.husky {
 	float: right;
-	margin-right: 20px;
-	margin-left: 20px;
-	margin-top: 10px;
-	box-shadow: 2px 2px 6px gray;
+	position: relative;
+	right: 20px;
+	height: 15%;
+	width: 15%;
 }
 
 .company {
@@ -48,11 +49,15 @@ p {
 	text-align: center;
 }
 
-nav {
+.info p {
+	padding: 2px;
+}
+
+header nav {
 	text-align: center;
 }
 
-nav ul {
+header nav ul {
 	border-radius: 5px;
 	margin-top: 20px;
 	margin-left: 20px;
@@ -61,13 +66,13 @@ nav ul {
 	box-shadow: 2px 2px 6px gray;
 }
 
-nav li {
+header nav li {
 	display: inline-block;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
-nav a {
+header nav a {
 	display: inline-block;
 	padding: 10px;
 	font-weight: bold;
@@ -84,11 +89,17 @@ a:hover {
 	text-decoration: underline;
 }
 
-.info p {
-	padding: 2px;
+
+.home li {
+	padding: 5px;
+	font-style: italic;
 }
 
-.main,
+.home a {
+	color: black;
+}
+
+.home,
 .menu,
 .about,
 .jobs {
@@ -125,25 +136,18 @@ a:hover {
 	float: left;
 	margin-right: 20px;
 	box-shadow: 2px 2px 6px gray;
-
+	height: 45%;
+	width: 45%;
 }
 
-.main li {
-	padding: 5px;
-}
-
-.husky {
-	float: right;
-	position: relative;
-	right: 20px;
-}
 
 .items {
 	margin-left: 60px;
 	padding-top: 5px;
 }
 
-.items h4 {
+.description {
+	padding: 0px;
 	padding-bottom: 15px;
 	font-style: italic;
 	font-size: 90%;
@@ -155,12 +159,20 @@ a:hover {
 	color: red;
 }
 
-.counter,
+.counter {
+	float: right;
+	box-shadow: 2px 2px 6px gray;
+	margin: 10px;
+	height: 35%;
+	width: 35%;
+}
+
 .oven {
 	float: right;
 	box-shadow: 2px 2px 6px gray;
 	margin: 10px;
-	margin-left: 10px;
+	height: 40%;
+	width: 40%;
 }
 
 .about h2 {
@@ -179,6 +191,64 @@ a:hover {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+	height: 25%;
+	width: 25%;
+}
+
+footer {
+	margin-top: 20px;
+	padding-top: 10px;
+	border-top-style: solid;
+	border-color: #999898;
+	border-width: 1px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+footer nav ul {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+footer nav li {
+	display: inline-block;
+	padding-right: 20px;
+	font-style: italic;
+}
+
+footer nav a {
+	color: #999898;
+	font-size: 85%;
+}
+
+footer p {
+	color: #999898;
+	font-size: 85%;
+	font-style: italic;
+}
+
+.call-us {
+	float: right;
+	position: relative;
+	bottom: 8px;
+	margin-right: 10px;
+}
+
+.copyright {
+	padding-bottom: 20px;
+}
+
+.copyright p {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.copyright-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 8%;
+	width: 8%;	
 }
 
 
