@@ -5,7 +5,7 @@
 body {
 	margin: 10px;
 	background-image: url(../img/background.png);
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 }
@@ -89,10 +89,38 @@ a:hover {
 	padding: 2px;
 }
 
-.main {
+.main,
+.menu,
+.about,
+.jobs {
 	margin: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 }
+
+.menu h1 { 
+	position: relative;
+	left: 120px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 200%;
+}
+
+.menu h2 {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 30px;
+	font-size: 150%;
+}
+
+
+.menu h3 {
+	padding-left: 10px;
+	padding-right: 10px; 
+	padding-top: 10px;
+	margin-left: 30px;
+}
+
 
 .pizza1 {
 	float: left;
@@ -103,6 +131,55 @@ a:hover {
 
 .main li {
 	padding: 5px;
+}
+
+.husky {
+	float: right;
+	position: relative;
+	right: 60px;
+	bottom: 10px;
+}
+
+.items {
+	margin-left: 90px;
+	padding-top: 5px;
+}
+
+.items h4 {
+	padding-bottom: 15px;
+	font-style: italic;
+}
+
+.special {
+	font-weight: bold;
+}
+
+.counter,
+.oven {
+	float: right;
+	box-shadow: 2px 2px 6px gray;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.about h1 {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 200%;
+	text-align: center;	
+}
+
+.about h2 {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	font-size: 120%;
+	font-style: italic;
+}
+
+.about p {
+	text-indent: 50px;
 }
 
 
