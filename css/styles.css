@@ -93,11 +93,12 @@ a:hover {
 .about,
 .jobs {
 	margin: 10px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 }
 
 .menu h1, 
-.about h1 { 
+.about h1,
+.jobs h1 { 
 	text-align: center;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -134,7 +135,7 @@ a:hover {
 .husky {
 	float: right;
 	position: relative;
-	bottom: 10px;
+	right: 20px;
 }
 
 .items {
@@ -150,7 +151,8 @@ a:hover {
 }
 
 .special {
-	font-weight: bold;
+	font-style: italic;
+	color: red;
 }
 
 .counter,
@@ -172,6 +174,13 @@ a:hover {
 .about p {
 	text-indent: 50px;
 }
+
+.pizza-cartoon {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 
 
 
