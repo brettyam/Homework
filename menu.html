@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<title>Dawg Pizza</title>
 		<meta name="author" content="brettyam">
@@ -10,7 +11,7 @@
 		<div class="content-box">
 			<header>
 				<a href="index.html">
-				<img class="logo" src="img/logo.png" alt="logo"></a>
+				<img class="logo" src="img/logo-vertical.png" alt="logo"></a>
 				<img class="husky" src="img/husky.jpg" alt="husky-photo">
 				<p class="company">Dawg Pizza</p>
 				<div class="info">
@@ -30,7 +31,6 @@
 			<div class="menu">
 				<h1>Dawg Pizza Menu</h1>
 				<h2>Pizzas:</h2>
-				<img class="counter" src="img/counter.jpg" alt="counter-photo">
 				<h3>All our pizzas are made with hand-thrown thin crust, baked in real wood ovens. Choose from one of these sizes:</h3>
 				<ul class="items">
 					<li>Small (12")</li>
@@ -39,34 +39,40 @@
 				</ul>
 				<h3 class="special">All pizzas can be customized--add a few ingredients, or take a few off--for an extra $2.</h3>
 
-				<h3>Meat Pies:</h3>
-				<ul class="items">
-					<li>Classic Pepperoni..........$10/$13/$16</li>
-					<li class="description">Pepperoni and Mozzarella on our Spicy Tomato Sauce.</li>
-					<li>The Hawaiian..........$12/$14/$17</li>
-					<li class="description">Canadian Bacon and Pineapple with Mozzarella on a rich Tomato Sauce.</li>
-					<li>Duck, Duck, Goose..........$15/$17/$19</li>
-					<li class="description">Roasted Duck and Goose with Bacon, Chestnuts on a rich Plum Sauce.</li>
-					<li>The Bambi..........$15/$17/$19</li>
-					<li class="description">Slow-cooked Venison with Red Cabbage on our famous Black Cherry Sauce.</li>
-					<li>The Ultimate..........$15/$19/$23</li>
-					<li class="description">Pepperoni, Bacon, Canadian Bacon, Chicken, Duck, Goose, and Ground Beef with Smoked Mozzarella on our Spicy Tomato Sauce. Add Venison or Elk for an extra $2!</li>
-				</ul>
-
-				<h3>Vegetarian Pies:</h3>
-					<ul class="items">
-						<li>Margherita..........$10/$13/$16</li>
-						<li class="description">Mozzarella, Basil, Salt on an Olive Oil Base.</li>
-						<li>Veggie Madness..........$11/$14/$17</li>
-						<li class="description">Mushroom, Black Olive, Onions, Roasted Garlic, Squash and Roasted Eggplant on our Spicy Tomato Sauce.</li>
-						<li>Forest Floor..........$11/$14/$17</li>
-						<li class="description">Three kinds of mushrooms with Mozzarella on a herb Tomato Sauce.</li>
-						<li>Mr Green..........$13/$16/$19</li>
-						<li class="description">Roasted Chicken with Romano on a Basil Pesto sauce.</li>
-						<li>Purple Monster..........$11/$14/$17</li>
-						<li class="description">Roasted Eggplant and Cabbage stir fried in sesame oil on a rich Plum Sauce.</li>
-					</ul>
-
+				<div class="row">
+					<div class="col-md-6">
+						<h3>Meat Pies:</h3>
+						<ul class="items">
+							<li>Classic Pepperoni..........$10/$13/$16</li>
+							<li class="description">Pepperoni and Mozzarella on our Spicy Tomato Sauce.</li>
+							<li>The Hawaiian..........$12/$14/$17</li>
+							<li class="description">Canadian Bacon and Pineapple with Mozzarella on a rich Tomato Sauce.</li>
+							<li>Duck, Duck, Goose..........$15/$17/$19</li>
+							<li class="description">Roasted Duck and Goose with Bacon, Chestnuts on a rich Plum Sauce.</li>
+							<li>The Bambi..........$15/$17/$19</li>
+							<li class="description">Slow-cooked Venison with Red Cabbage on our famous Black Cherry Sauce.</li>
+							<li>The Ultimate..........$15/$19/$23</li>
+							<li class="description">Pepperoni, Bacon, Canadian Bacon, Chicken, Duck, Goose, and Ground Beef with Smoked Mozzarella on our Spicy Tomato Sauce. Add Venison or Elk for an extra $2!</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<h3>Vegetarian Pies:</h3>
+						<ul class="items">
+							<li>Margherita..........$10/$13/$16</li>
+							<li class="description">Mozzarella, Basil, Salt on an Olive Oil Base.</li>
+							<li>Veggie Madness..........$11/$14/$17</li>
+							<li class="description">Mushroom, Black Olive, Onions, Roasted Garlic, Squash and Roasted Eggplant on our Spicy Tomato Sauce.</li>
+							<li>Forest Floor..........$11/$14/$17</li>
+							<li class="description">Three kinds of mushrooms with Mozzarella on a herb Tomato Sauce.</li>
+							<li>Mr Green..........$13/$16/$19</li>
+							<li class="description">Roasted Chicken with Romano on a Basil Pesto sauce.</li>
+							<li>Purple Monster..........$11/$14/$17</li>
+							<li class="description">Roasted Eggplant and Cabbage stir fried in sesame oil on a rich Plum Sauce.</li>
+						</ul>
+					</div>
+				</div>
+			
+				<img class="counter" src="img/counter.jpg" alt="counter-photo">
 				<h2>Drinks:</h2>
 					<ul class="items">
 						<li>Coke, Diet Coke, Sprite, Root Beer, or Irn Bru by the can..........$4</li>
@@ -99,5 +105,7 @@
 				</div>
 			</footer>
 		</div>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	</body>
 </html>
