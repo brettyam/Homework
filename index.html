@@ -1,25 +1,26 @@
 <!doctype html>
 <html>
     <head>
-    	<meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <title>Dawg Pizza</title>
         <meta name="author" content="brettyam">
     </head>
     <body>
-    	<div class="content-box">
-    		<header>
-        		<a href="index.html">
+        <div class="content-box">
+            <header>
+                <a href="index.html">
                 <img class="logo" src="img/logo-vertical.png" alt="logo"></a>
                 <img class="husky" src="img/husky.jpg" alt="husky-photo">
                 <p class="company">Dawg Pizza</p>
                 <div class="info">
-                	<p>Open 10:00am to 11:00pm Monday through Saturday</p>
+                    <p>Open 10:00am to 11:00pm Monday through Saturday</p>
                     <p>4306 University Way NE, Seattle, WA 98105</p>
                 </div>
                 <nav>
                     <ul>
-                    	<li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="menu.html">Menu</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="jobs.html">Jobs</a></li>
@@ -28,21 +29,50 @@
             </header>
 
             <div class="home">
-                <p><img class="pizza1" src="img/pizza1.jpg" alt="pizza1-photo">Awesome wood-fired pizza with fresh ingredients baked to order. Come in and eat, or call us for delivery!</p>
-                <p>How to contact us:</p>
-                <ul>
-                    <li>Phone: 206-555-1212</li>
-                    <li>Email: <a href="mailto:dawgpizzaseattle@gmail.com">dawgpizzaseattle@gmail.com</a></li>        
-                    <li>Twitter: <a href="https://twitter.com/DawgPizzaSea">@DawgPizzaSea</a></li>
-                </ul>
-                <p>Come visit us at <a href="http://goo.gl/maps/0Ogzp">4306 University Way NE, Seattle, WA 98105</a>!</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Awesome wood-fired pizza with fresh ingredients baked to order. Come in and eat, or call us for delivery!</p>
+                        <div class="contact">
+                            <p>How to contact us:</p>
+                            <ul>
+                                <li>Phone: 206-555-1212</li>
+                                <li>Email: <a href="mailto:dawgpizzaseattle@gmail.com">dawgpizzaseattle@gmail.com</a></li>        
+                                <li>Twitter: <a href="https://twitter.com/DawgPizzaSea">@DawgPizzaSea</a></li>
+                            </ul>
+                        </div>
+                        <p>Come visit us at <a href="http://goo.gl/maps/0Ogzp">4306 University Way NE, Seattle, WA 98105</a>!</p> 
+                    </div>
+
+                    <div class="col-md-3">
+                        <img class="pizza1" src="img/pizza1.jpg" alt="pizza1-photo">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/HWL__9yDu8I" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="customers-list col-md-6">
+                        <p>"Two thumbs up!"</p>
+                        <p class="student">-Jesse Pinkman: junior, business</p>
+                        <p>"I love the atmosphere."</p>
+                        <p class="student">-Marie Schrader: sophomore, pre-med</p>
+                        <p>"It's the perfect place to meet with friends!"</p>
+                        <p class="student">-Saul Goodman: junior, pre-law</p>
+                        <p>"10/10, would go again."</p>
+                        <p class="student">-Walter White: senior, chemistry</p>
+                        <p>"I go there all the time after class."</p>
+                        <p class="student">-Todd Alquist: freshman, German history</p>
+                    </div>
+                </div>
             </div>
 
             <footer>
-            	<p class="call-us">Call us for delivery: 205-555-1212</p>
-            	<nav>
-                	<ul>
-                    	<li><a href="index.html">Home</a></li>
+                <p class="call-us">Call us for delivery: 205-555-1212</p>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="menu.html">Menu</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="jobs.html">Jobs</a></li>
@@ -50,10 +80,12 @@
                 </nav>
 
                  <div class="copyright">
-                 	<p>&#169; 2013 Dawg Pizza</p>
+                    <p>&#169; 2013 Dawg Pizza</p>
                     <img class="copyright-logo" src="img/logo.png" alt="copyright-logo">
                 </div>
             </footer>
-        </div>  
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>  
     </body>
 </html>

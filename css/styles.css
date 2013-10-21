@@ -25,7 +25,7 @@ p {
 	float: left;
 	padding-left: 25px;
 	padding-top: 10px;
-	width: 115px; 
+	width: 140px; 
 }
 
 .logo:hover {
@@ -85,28 +85,32 @@ a:visited {
 	text-decoration: none;
 }
 
-a:hover {
+header a:hover {
 	text-decoration: underline;
-}
-
-.col {
-	float: left;
-	width: 50%;
-	padding: 10px;
-}
-
-.row {
-	clear: both;
-	min-width: 600px;
+	color: #EDE275;
 }
 
 .home li {
 	padding: 5px;
+	margin-left: 15px;
 	font-style: italic;
 }
 
 .home a {
 	color: black;
+}
+
+.home .col-md-6 {
+	left: 20px;
+}
+
+.customers-list .student {
+	padding-top: 0px;
+	padding-bottom: 15px;
+	font-size: 90%;
+	text-indent: 30px;
+	font-style: italic;
+	color: gray;
 }
 
 .home,
@@ -141,12 +145,15 @@ a:hover {
 	padding-top: 10px;
 }
 
-
 .pizza1 {
-	float: left;
-	margin-right: 20px;
+	margin: 10px;
 	width: 350px;
 	box-shadow: 2px 2px 6px gray;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
 }
 
 
@@ -227,6 +234,11 @@ footer nav li {
 footer nav a {
 	color: #999898;
 	font-size: 85%;
+}
+
+footer nav a:hover {
+	color: #999898;
+	text-decoration: underline;
 }
 
 footer p {
