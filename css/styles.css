@@ -78,6 +78,12 @@ header nav a {
 	font-weight: bold;
 	font-size: 110%;
 	color: #EDE275;
+
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
 }
 
 a:link,
@@ -86,8 +92,9 @@ a:visited {
 }
 
 header a:hover {
-	text-decoration: underline;
 	color: #EDE275;
+	background-color: #800080;
+	border-radius: 5px;
 }
 
 .home li {
@@ -98,6 +105,10 @@ header a:hover {
 
 .home a {
 	color: black;
+}
+
+.home a:hover {
+	text-decoration: underline;
 }
 
 .home .col-md-6 {
@@ -268,6 +279,11 @@ footer p {
 	margin-left: auto;
 	margin-right: auto;
 	width: 90px;	
+}
+
+:focus {
+	outline: #F00 dotted 2px;
+	background-color: #FFF700;
 }
 
 
