@@ -8,6 +8,7 @@ body {
 	background-repeat: repeat;
 	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
+	min-width: 768px;
 }
 
 p {
@@ -52,6 +53,7 @@ p {
 .info p {
 	padding: 2px;
 }
+
 
 header nav {
 	text-align: center;
@@ -115,6 +117,10 @@ header a:hover {
 	left: 20px;
 }
 
+.customers-list p {
+	padding-left: 30px;
+}
+
 .customers-list .student {
 	padding-top: 0px;
 	padding-bottom: 15px;
@@ -157,16 +163,35 @@ header a:hover {
 }
 
 .pizza1 {
+	position: relative;
+	left: 30px;
 	margin: 10px;
 	width: 350px;
 	box-shadow: 2px 2px 6px gray;
 }
 
+@media screen and (max-width: 1000px) {
+	.pizza1 {
+		display: block;
+		margin: 0 auto;
+		position: relative;
+		left: 20px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.counter {
+		display: none;
+	}
+	.customers-list p {
+		text-align: center;
+	}
+}
+
 iframe {
 	display: block;
 	margin: 0 auto;
+	box-shadow: 2px 2px 6px gray;
 }
-
 
 .items {
 	margin-left: 60px;
@@ -222,6 +247,7 @@ iframe {
 }
 
 footer {
+	clear: both;
 	margin-top: 20px;
 	padding-top: 10px;
 	border-top-style: solid;
@@ -279,12 +305,27 @@ footer p {
 	margin-left: auto;
 	margin-right: auto;
 	width: 90px;	
+
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease; 
+}
+
+.copyright-logo:hover {
+	-webkit-transform: scale(3) rotate(360deg);
+	-moz-transform: scale(3) rotate(360deg);
+	-o-transform: scale(3) rotate(360deg);
+	-ms-transform: scale(3) rotate(360deg);
+	transform: scale(3) rotate(360deg); 
 }
 
 :focus {
-	outline: #F00 dotted 2px;
-	background-color: #FFF700;
+	outline:#00FF00 dotted thick;
+	background-color: yellow;
 }
+
 
 
 
