@@ -207,8 +207,13 @@ iframe {
 	padding-top: 5px;
 }
 
+.name {
+	padding-bottom: 3px;
+}
+
 .description {
 	padding: 0px;
+	padding-left: 10px;
 	padding-bottom: 15px;
 	font-style: italic;
 	font-size: 90%;
