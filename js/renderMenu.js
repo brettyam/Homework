@@ -3,61 +3,62 @@
 //document on ready function
 $(function(){
 	renderPizzas(com.dawgpizza.menu.pizzas);
-	renderDrinks(com.dawgpizza.menu.drinks);
-	renderDesserts(com.dawgpizza.menu.desserts);
+	renderMisc(com.dawgpizza.menu.drinks);
+	renderMisc(com.dawgpizza.menu.desserts);
 });
 
+//this function handles both vegetarian and meat pizzas
 function renderPizzas(pizzaItems) {
 	var meatPizzaTemplate = $('.meat-pizza-template');
 	var veggiePizzaTemplate = $('.veggie-pizza-template');
-	var meatPizzaMenu = $('.meat-pizza-menu');
-	var veggiePizzaMenu = $('.veggie-pizza-menu');
+	var pizzaMenu;
 	var pizzaInstance;
 	var priceString;
 
-	//for each item in com.dawgpizza.menu.pizzas, merge them with
-	//the template and add it to the page
+	//for each item in com.dawgpizza.menu.pizzas, merge it
+	//with its respective template and to the page
 	$.each(pizzaItems, function(){
+		//test whether this pizza is a meat or vegetarian pie
 		if (!this.vegetarian) {
 			pizzaInstance = meatPizzaTemplate.clone();
+			pizzaMenu = $('.meat-pizza-menu')
 		} else {
 			pizzaInstance = veggiePizzaTemplate.clone();
+			pizzaMenu = $('.veggie-pizza-menu')
 		}
 		priceString = "$" + this.prices[0] + "/$" + this.prices[1] + "/$" + this.prices[2];
 		pizzaInstance.find('.name').html(this.name + "...................." + priceString);
 		pizzaInstance.find('.description').html(this.description);
-		if (!this.vegetarian) {
-			meatPizzaMenu.append(pizzaInstance);
-		} else {
-			veggiePizzaMenu.append(pizzaInstance);
-		}
+		pizzaMenu.append(pizzaInstance);
 	});
+	//dynamically change the name of this category
+	$('.category1').html(com.dawgpizza.menuCategories[0].caption + ":");
 }
 
-function renderDrinks(drinkItems) {
+//this function handles both drink and dessert items
+function renderMisc(miscItems) {
 	var drinkTemplate = $('.drink-template');
-	var drinkMenu = $('.drink-menu');
-	var drinkInstance;
-
-	//for each item in com.dawgpizza.menu.drinks, merge them with
-	//the template and add it to the page
-	$.each(drinkItems, function(){
-		drinkInstance = drinkTemplate.clone();
-		drinkInstance.find('.name').html(this.name + "....................$" + this.price);
-		drinkMenu.append(drinkInstance);
-	});
-}
-
-function renderDesserts(dessertItems) {
 	var dessertTemplate = $('.dessert-template');
-	var dessertMenu = $('.dessert-menu');
-	var dessertInstance;
+	var miscMenu;
+	var miscInstance;
+	var categoryNum;
 
-	//for each item in com.dawgpizza.menu.desserts, merge them with
-	//the template and add it to the page
-	$.each(dessertItems, function(){
-		dessertInstance = dessertTemplate.clone();
-		dessertInstance.find('.name').html(this.name + "....................$" + this.price);
-		dessertMenu.append(dessertInstance);
+	//for each item in com.dawgpizza.menu.drinks/desserts,
+	//merge it with its respective template and add to page
+	$.each(miscItems, function(){
+		//test whether this item is a drink or a dessert
+		if (this.type.toLowerCase() == 'drink') {
+			miscInstance = drinkTemplate.clone();
+			miscMenu = $('.drink-menu');
+			categoryNum = 2;
+		} else {
+			miscInstance = dessertTemplate.clone();
+			miscMenu = $('.dessert-menu');
+			categoryNum = 3;
+		}
+		miscInstance.find('.name').html(this.name + "....................$" + this.price);
+		miscMenu.append(miscInstance);
 	});
+	//dynamically change the name of this category
+	$('.category' + categoryNum).html(com.dawgpizza.menuCategories[categoryNum - 1].caption + ":");
 }
