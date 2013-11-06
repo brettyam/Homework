@@ -40,52 +40,38 @@
 				<h3 class="special">All pizzas can be customized--add a few ingredients, or take a few off--for an extra $2.</h3>
 
 				<div class="row">
-					<div class="col-md-6">
+					<div class="meat-pizza-menu col-md-6">
 						<h3>Meat Pies:</h3>
-						<ul class="items">
-							<li>Classic Pepperoni..........$10/$13/$16</li>
-							<li class="description">Pepperoni and Mozzarella on our Spicy Tomato Sauce.</li>
-							<li>The Hawaiian..........$12/$14/$17</li>
-							<li class="description">Canadian Bacon and Pineapple with Mozzarella on a rich Tomato Sauce.</li>
-							<li>Duck, Duck, Goose..........$15/$17/$19</li>
-							<li class="description">Roasted Duck and Goose with Bacon, Chestnuts on a rich Plum Sauce.</li>
-							<li>The Bambi..........$15/$17/$19</li>
-							<li class="description">Slow-cooked Venison with Red Cabbage on our famous Black Cherry Sauce.</li>
-							<li>The Ultimate..........$15/$19/$23</li>
-							<li class="description">Pepperoni, Bacon, Canadian Bacon, Chicken, Duck, Goose, and Ground Beef with Smoked Mozzarella on our Spicy Tomato Sauce. Add Venison or Elk for an extra $2!</li>
-						</ul>
+						<div class="meat-pizza-template">
+							<p class="name"></p>
+							<p class="description"></p>
+						</div>
 					</div>
-					<div class="col-md-6">
+
+					<div class="veggie-pizza-menu col-md-6">
 						<h3>Vegetarian Pies:</h3>
-						<ul class="items">
-							<li>Margherita..........$10/$13/$16</li>
-							<li class="description">Mozzarella, Basil, Salt on an Olive Oil Base.</li>
-							<li>Veggie Madness..........$11/$14/$17</li>
-							<li class="description">Mushroom, Black Olive, Onions, Roasted Garlic, Squash and Roasted Eggplant on our Spicy Tomato Sauce.</li>
-							<li>Forest Floor..........$11/$14/$17</li>
-							<li class="description">Three kinds of mushrooms with Mozzarella on a herb Tomato Sauce.</li>
-							<li>Mr Green..........$13/$16/$19</li>
-							<li class="description">Roasted Chicken with Romano on a Basil Pesto sauce.</li>
-							<li>Purple Monster..........$11/$14/$17</li>
-							<li class="description">Roasted Eggplant and Cabbage stir fried in sesame oil on a rich Plum Sauce.</li>
-						</ul>
+						<div class="veggie-pizza-template">
+							<p class="name"></p>
+							<p class="description"></p>
+						</div>
 					</div>
 				</div>
-			
+
 				<img class="counter" src="img/counter.jpg" alt="counter-photo">
+
 				<h2>Drinks:</h2>
-					<ul class="items">
-						<li>Coke, Diet Coke, Sprite, Root Beer, or Irn Bru by the can..........$4</li>
-						<li>Rainier Beer by the can..........$4</li>
-						<li>House Red Wine by the glass or bottle..........$10/$40</li>
-					</ul>
-				
+				<div class="drink-menu">
+					<div class="drink-template">
+						<p class="name"></p>
+					</div>
+				</div>
+
 				<h2>Desserts:</h2>
-					<ul class="items">
-						<li>Chocolate Gelato..........$4</li>
-						<li>Lemon Sorbet..........$7</li>
-						<li>Ricotta Cheese Cake..........$10</li>
-					</ul>
+				<div class="dessert-menu">
+					<div class="dessert-template">
+						<p class="name"></p>
+					</div>
+				</div>
 			</div>
 
 			<footer>
@@ -107,5 +93,7 @@
 		</div>	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="js/renderMenu.js"></script>
+		<script src="http://www.dawgpizza.com/orders/menu.js"></script>
 	</body>
 </html>
