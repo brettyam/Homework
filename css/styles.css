@@ -157,14 +157,13 @@ header a:hover {
 
 .home,
 .menu,
+.order,
 .about,
 .jobs {
 	padding: 10px;
 }
 
-.menu h1, 
-.about h1,
-.jobs h1 { 
+h1 { 
 	text-align: center;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -185,12 +184,6 @@ header a:hover {
 	padding-right: 10px; 
 	padding-top: 10px;
 }
-
-/*.pizza-menu,
-.drink-menu,
-.dessert-menu {
-	padding-left: 55px;
-}*/
 
 .pizza1 {
 	position: relative;
@@ -270,6 +263,33 @@ iframe {
 	width: 350px;
 	margin-bottom: 50px;
 }
+
+.order .row {
+	font-family: 'Helvetica';
+}
+
+.order h2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 25px;
+}
+
+.total-row {
+	border-top: 1px solid gray;
+}
+
+.total-price {
+	font-weight: bold;
+}
+
+.button-row {
+	margin-top: 2em;
+	text-align: right;
+}
+
+/*.templates {
+	display: none;
+}*/
 
 .about h2 {
 	padding-left: 10px;

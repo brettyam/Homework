@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Dawg Pizza</title>
+        <meta name="author" content="brettyam">
+    </head>
+    <body>
+        <div class="content-box">
+            <header>
+                <a href="index.html">
+                <img class="logo" src="img/logo-vertical.png" alt="logo"></a>
+                <img class="husky" src="img/husky.jpg" alt="husky-photo">
+                <p class="company">Dawg Pizza</p>
+                <div class="info">
+                    <p>Open 10:00am to 11:00pm Monday through Saturday</p>
+                    <p>4306 University Way NE, Seattle, WA 98105</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="order">
+            	<h1>Order Now</h1>
+            	<p>Our delivery hours are from noon until 11:00pm and currently deliver within the Seattle city limits only. Delivery is free, but we enforce a $20 dollar minimum order. Both cash and credit card are accepted.</p>
+
+            	<div class="row">
+            		<div class="col-md-4 col-md-push-8">
+            			<h2>Your Cart:</h2>
+            			<div class="cart-items-container"></div>
+            			<div class="cart-footer">
+            				<div class="row total-row">
+            					<div class="col-xs-10">
+            						Total:
+            					</div>
+            					<div class="col-xs-2">
+            	                	$<span class="total-price"></span>
+            					</div>
+            				</div>
+            				<div class="row">
+            					<div class="col-xs-12 button-row">
+            						<button type="button" class="btn btn-primary place-order">Place Order</button>
+            					</div>
+            				</div>
+            			</div>	
+            		</div>
+            		<div class="col-md-8 col-md-pull-4">
+            			<div class="pizzas-container"></div>
+            		</div>
+            	</div>
+            </div> <!-- .order -->
+
+            <div class="templates">
+
+            	<!-- pizza template -->
+            	<div class="pizza-template">
+            		<h3 class="pizza-name"></h3>
+            		<p class="size-template">
+            			<button type="button" class="btn btn-default add-to-cart">
+            				<span class="pizza-size"></span> for $<span class="size-price"></span>
+            			</button>
+            		</p>
+            	</div>
+
+            	<!-- car item template -->
+            	<div class="cart-item-template cart-item row">
+            		<div class="col-xs-10">
+            			<p><button type="button" class="btn btn-default btn-xs remove-item">&times;</button>
+            				<span class="pizza-name"></span> (<span class="pizza-size"></span>)
+            			</p>
+            		</div>
+            		<div class="col-xs-2 col-price">
+            			<p>$<span class="size-price"></span></p>
+            		</div>
+            	</div>
+
+            </div> <!-- .templates -->
+
+            <footer>
+                <p class="call-us">Call us for delivery: 205-555-1212</p>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                    </ul>
+                </nav>
+
+                 <div class="copyright">
+                    <p>&#169; 2013 Dawg Pizza</p>
+                    <img class="copyright-logo" src="img/logo.png" alt="copyright-logo">
+                </div>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> 
+
+        <!-- our own JavaScript files -->
+        <script src="js/utils.js"></script>
+        <script src="js/events.js"></script>
+        <script src="js/models.js"></script>
+        <script src="js/views.js"></script>
+        <script src="js/pizzas.js"></script>
+        <script src="js/pizzaView.js"></script>
+        <script src="js/pizzasView.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/cartItemView.js"></script>
+        <script src="js/cartView.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="http://www.dawgpizza.com/orders/menu.js"></script>
+
+
+    </body>
+</html>
