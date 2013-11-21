@@ -1,11 +1,11 @@
 /* 
-	createPizzasModel()
+	createItemsModel()
 
-	Creates a model for the list of pizzas from the menu.
+	Creates a model for the items of a given menu.
 	Uses ListModel as the prototype but adds specific methods.
 */
 
-function createPizzasModel(config) {
+function createItemsModel(config) {
 	var model = createListModel(config);
 
 	model.getItemByName = function(name) {
@@ -26,8 +26,8 @@ function createPizzasModel(config) {
 		if (!this.menu) {
 			throw new 'No menu property supplied in config.'
 		}
-		var pizzas = this.menu;
-		model.setItems(pizzas);
+		var items = this.menu;
+		model.setItems(items);
 	}; //refresh()
 	return model;
-} //createPizzasModel()
+} //createItemsModel()

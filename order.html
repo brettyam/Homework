@@ -63,10 +63,18 @@
                         </div>  
                     </div>
                     <div class="col-md-8 col-md-pull-4 menu-col">
-                        <h2 class="category">Pizzas:</h2>
-                        <div class="pizzas-container"></div>
-                        <h2 class="category">Drinks:</h2>
-                        <div class="drinks-container"></div>
+                        <div>
+                            <h2 class="category">Pizzas:</h2>
+                            <div class="pizzas-container"></div>
+                        </div>
+                        <div class="col-xs-6">
+                            <h2 class="category">Drinks:</h2>
+                            <div class="drinks-container"></div>
+                        </div>
+                        <div class="col-xs-6">
+                            <h2 class="category">Desserts:</h2>
+                            <div class="desserts-container"></div>
+                        </div>
                     </div>
                 </div>
             </div> <!-- .order -->
@@ -83,6 +91,22 @@
                             <span class="pizza-size"></span> for $<span class="size-price"></span>
                         </button>
                     </p>
+                </div>
+
+                <!-- drink template -->
+                <div class="drink-template">
+                    <p class="drink-name"></p>
+                    <button type="button" class="btn btn-primary add-to-cart">
+                        Add for $<span class="drink-price"></span>
+                    </button>
+                </div>
+
+                <!-- dessert template -->
+                <div class="dessert-template">
+                    <p class="dessert-name"></p>
+                    <button type="button" class="btn btn-primary add-to-cart">
+                        Add for $<span class="dessert-price"></span>
+                    </button>
                 </div>
 
                 <!-- car item template -->
@@ -125,9 +149,13 @@
         <script src="js/events.js"></script>
         <script src="js/models.js"></script>
         <script src="js/views.js"></script>
-        <script src="js/pizzas.js"></script>
+        <script src="js/items.js"></script>
         <script src="js/pizzaView.js"></script>
         <script src="js/pizzasView.js"></script>
+        <script src="js/drinkView.js"></script>
+        <script src="js/drinksView.js"></script>
+        <script src="js/dessertView.js"></script>
+        <script src="js/dessertsView.js"></script>
         <script src="js/cart.js"></script>
         <script src="js/cartItemView.js"></script>
         <script src="js/cartView.js"></script>

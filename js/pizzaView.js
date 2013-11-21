@@ -1,7 +1,7 @@
 /*
-	createPizzasView()
+	createPizzaView()
 
-	View class that can render a pizza model.
+	View class that can render a pizza item model.
 	Uses TemplateView as the prototype and overrides
 	render() to create the add to cart buttons for the
 	various sizes.

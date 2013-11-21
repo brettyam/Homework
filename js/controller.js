@@ -23,13 +23,17 @@ $(function(){
 		cartModel.setItems(JSON.parse(cartJSON));
 	} //var cartJSON
 
-	var pizzasModel = createPizzasModel({
+	var pizzasModel = createItemsModel({
 		menu: com.dawgpizza.menu.pizzas
 	}); //var pizzasModel
 
-	/*var drinksModel = createDrinksModel({
+	var drinksModel = createItemsModel({
 		menu: com.dawgpizza.menu.drinks
-	}); */
+	}); //var drinksModel
+
+	var dessertsModel = createItemsModel({
+		menu: com.dawgpizza.menu.desserts
+	}); //var dessertsModel
 
 	var pizzasView = createPizzasView({
 		model: pizzasModel,
@@ -37,29 +41,61 @@ $(function(){
 		container: $('.pizzas-container')
 	}); //var pizzasView
 
-	/*var drinksView = createDrinksView({
+	var drinksView = createDrinksView({
 		model: drinksModel,
 		template: $('.drink-template'),
 		container: $('.drinks-container')
-	});*/
+	});
 
-	pizzasModel.refresh(); //refresh to get pizzas from server
-	//drinksModel.refresh();
+	var dessertsView = createDessertsView({
+		model: dessertsModel,
+		template: $('.dessert-template'),
+		container: $('.desserts-container')
+	});
 
-	//when the movies view triggers 'addToCart'
-	//add a new item to the cart, using the supplied
-	//pizzaName and price
+	pizzasModel.refresh(); 		//render pizzas
+	drinksModel.refresh(); 		//render drinks
+	dessertsModel.refresh();	//render desserts
+	
+	//remove the only alcoholic beverage from drinksModel
+	var beer = drinksModel.getItemByName('Irn Bru');
+	drinksModel.removeItem(beer);
+
+	//when a view triggers 'addToCart'
+	//add the new item to the cart
 	pizzasView.on('addToCart', function(data){
 		var pizza = pizzasModel.getItemByName(data.pizzaName);
 		if (!pizza) {
-			throw 'Invalid pizza.'
+			throw 'Invalid pizza.';
 		}
 		cartModel.addItem({
 			name: data.pizzaName,
 			size: data.pizzaSize,
 			price: pizza.prices[data.pizzaSize]
 		});
-	}); //addToCart event
+	}); //addToCart event for pizzas
+
+	drinksView.on('addToCart', function(data){
+		var drink = drinksModel.getItemByName(data.drinkName);
+		if (!drink) {
+			throw 'Invalid drink.';
+		}
+		cartModel.addItem({
+			name: drink.name,
+			price: drink.price
+		});
+	}); //addToCart event for drinks
+
+	dessertsView.on('addToCart', function(data){
+		var dessert = dessertsModel.getItemByName(data.dessertName);
+		if (!dessert) {
+			throw 'Invalid dessert.';
+		}
+		cartModel.addItem({
+			name: dessert.name,
+			price: dessert.price
+		});
+	}); //addToCart event for desserts
 
 	//save cart to local storage
 	cartModel.on('change', function(){

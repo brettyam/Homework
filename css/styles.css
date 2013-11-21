@@ -266,7 +266,7 @@ iframe {
 
 .order h2 {
 	margin-top: 20px;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	font-size: 25px;
 }
 
@@ -287,6 +287,9 @@ iframe {
 	padding-bottom: 80px;
 }
 
+.size-template {
+	width: auto;
+}
 
 .templates {
 	display: none;
@@ -297,6 +300,17 @@ iframe {
 	font-family: 'Helvetica';
 }
 
+.drinks-container,
+.desserts-container {
+	padding-left: 20px;
+}
+
+.drink-name,
+.dessert-name {
+	padding-left: 0px;
+	padding-top: 20px;
+	padding-bottom: 3px;
+}
 
 .menu-col {
 	border-right: 1px solid gray;
