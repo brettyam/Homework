@@ -74,6 +74,7 @@ $(function(){
 			price: pizza.prices[data.pizzaSize]
 		});
 	}); //addToCart event for pizzas
+	console.log(cartModel.getItems());
 
 	drinksView.on('addToCart', function(data){
 		var drink = drinksModel.getItemByName(data.drinkName);
@@ -101,4 +102,8 @@ $(function(){
 	cartModel.on('change', function(){
 		localStorage.setItem('cart', cartModel.toJSON());
 	});
+
+	//posting
+	//$('#cart-input').val(.....json.....);
+	//$('#cart-form').submit();
 });
