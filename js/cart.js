@@ -11,14 +11,25 @@
 function createCartModel(config) {
 	var model = createListModel(config);
 	
-	model.getTotalPrice = function() {
+	model.getSubtotalPrice = function() {
 		var idx;
-		var totalPrice = 0;
+		var subtotalPrice = 0;
 		for (idx = 0; idx < this.items.length; ++idx) {
-			totalPrice += this.items[idx].price;
+			subtotalPrice += this.items[idx].price;
 		}
-		return totalPrice.toFixed(2);
-	} //add getTotalPrice() function
+		return subtotalPrice.toFixed(2);
+	} //add getsubtotalPrice() function
+
+	model.getTax = function() {
+		return (0.095 * this.getSubtotalPrice()).toFixed(2);
+	}
+
+	model.getGrandTotalPrice = function() {
+		var subTotal = this.getSubtotalPrice();
+		var tax = this.getTax();
+		var grandTotal = +subTotal + +tax;
+		return grandTotal.toFixed(2);
+	}
 
 	model.toJSON = function() {
 		return JSON.stringify(this.items)

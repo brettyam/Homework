@@ -12,7 +12,9 @@ $(function(){
 		model: cartModel,
 		template: $('.cart-item-template'),
 		container: $('.cart-items-container'),
-		totalPrice: $('.total-price')
+		subtotalPrice: $('.subtotal-price'),
+		tax: $('.tax'),
+		grandTotalPrice: $('.grandtotal-price')
 	}); //var cartView
 
 	//remember what was previously in cart
@@ -25,13 +27,24 @@ $(function(){
 		menu: com.dawgpizza.menu.pizzas
 	}); //var pizzasModel
 
+	/*var drinksModel = createDrinksModel({
+		menu: com.dawgpizza.menu.drinks
+	}); */
+
 	var pizzasView = createPizzasView({
 		model: pizzasModel,
 		template: $('.pizza-template'),
 		container: $('.pizzas-container')
 	}); //var pizzasView
 
+	/*var drinksView = createDrinksView({
+		model: drinksModel,
+		template: $('.drink-template'),
+		container: $('.drinks-container')
+	});*/
+
 	pizzasModel.refresh(); //refresh to get pizzas from server
+	//drinksModel.refresh();
 
 	//when the movies view triggers 'addToCart'
 	//add a new item to the cart, using the supplied

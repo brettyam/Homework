@@ -13,7 +13,9 @@ function createCartView(config) {
 	var view = createTemplateListView(config);
 
 	view.afterRender = function() {
-		this.totalPrice.html(this.model.getTotalPrice());
+		this.subtotalPrice.html(this.model.getSubtotalPrice());
+		this.tax.html(this.model.getTax());
+		this.grandTotalPrice.html(this.model.getGrandTotalPrice());
 	} //add afterRender() function
 
 	return view;

@@ -19,14 +19,15 @@ function createPizzaView(config) {
 		var clonedSizeTemplate;
 
 		clonedTemplate.find('.pizza-name').html(this.model.name);
+		clonedTemplate.find('.pizza-description').html(this.model.description);
 		for (size in this.model.prices) {
 			clonedSizeTemplate = sizeTemplate.clone();
 			if (size == 0) {
-				sizeLabel = 'S';
+				sizeLabel = 'Small';
 			} else if (size == 1) {
-				sizeLabel = 'M';
+				sizeLabel = 'Med';
 			} else {
-				sizeLabel = 'L';
+				sizeLabel = 'Large';
 			}
 			clonedSizeTemplate.find('.pizza-size').html(sizeLabel);
 			clonedSizeTemplate.find('.size-price').html(this.model.prices[size]);

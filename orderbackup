@@ -30,72 +30,69 @@
             </header>
 
             <div class="order">
-                <h1>Order Now</h1>
-                <p>Our delivery hours are from noon until 11:00pm and currently deliver within the Seattle city limits only. Delivery is free, but we enforce a $20 dollar minimum order. Both cash and credit card are accepted.</p>
+            	<h1>Order Now</h1>
+            	<p>Our delivery hours are from noon until 11:00pm and currently deliver within the Seattle city limits only. Delivery is free, but we enforce a $20 dollar minimum order. Both cash and credit card are accepted.</p>
 
-                <div class="row">
-                    <div class="col-md-4 col-md-push-8 cart-col">
-                        <h2>Your Cart:</h2>
-                        <div class="cart-items-container"></div>
-                        <div class="cart-footer">
-                            <div class="row total-row">
-                                 <div class="col-xs-10">
-                                     <ul>
+            	<div class="row">
+            		<div class="col-md-4 col-md-push-8 cart-col">
+            			<h2>Your Cart:</h2>
+            			<div class="cart-items-container"></div>
+            			<div class="cart-footer">
+            				<div class="row total-row">
+            					<div class="col-xs-10">
+            						<ul>
                                         <li>Subtotal:</li>
                                         <li>Tax (9.5%):</li>
                                         <li class="gr">Grand Total:</li>
                                     <ul>
-                                </div>
-                                <div class="col-xs-2 total-string">
-                                    $<span class="subtotal-price"></span>
+            					</div>
+            					<div class="col-xs-2 total-string">
+            	                	$<span class="subtotal-price"></span>
                                     $<span class="tax"></span>
                                     $<span class="grandtotal-price"></span>
-                                </div>
-                            </div>
-                            <div class="row">
+            					</div>
+            				</div>
+            				<div class="row">
                                 <div class="col-xs-6 button-row">
                                     <button type="button" class="btn btn-danger start-over">Empty Cart</button>
                                 </div>                              
                                 <div class="col-xs-6 button-row">
-                                    <button type="button" class="btn btn-success place-order">Place Order</button>
-                                </div>                                
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="col-md-8 col-md-pull-4 menu-col">
+            						<button type="button" class="btn btn-success place-order">Place Order</button>
+            					</div>                                
+            				</div>
+            			</div>	
+            		</div>
+                    <div class="col-md-8 col-md-pull-4">
                         <h2 class="category">Pizzas:</h2>
                         <div class="pizzas-container"></div>
-                        <h2 class="category">Drinks:</h2>
-                        <div class="drinks-container"></div>
-                    </div>
-                </div>
+            		</div>
+            	</div>
             </div> <!-- .order -->
 
             <div class="templates">
 
-                <!-- pizza template -->
-                <div class="pizza-template">
-                    <p class="pizza-name"></p>
+            	<!-- pizza template -->
+            	<div class="pizza-template">
+            		<p class="pizza-name"></p>
                     <p class="pizza-description"></p>
-                    <!-- size template -->
-                    <p class="size-template col-xs-3">
-                        <button type="button" class="btn btn-primary add-to-cart">
-                            <span class="pizza-size"></span> for $<span class="size-price"></span>
-                        </button>
-                    </p>
-                </div>
+            		<p class="size-template">
+                        <button type="button" class="btn btn-default add-to-cart">
+                		  <span class="pizza-size"></span> for $<span class="size-price"></span>
+                	   </button>
+            		</p>
+            	</div>
 
-                <!-- car item template -->
-                <div class="cart-item-template cart-item row">
-                    <div class="col-xs-10">
-                        <p><button type="button" class="btn btn-default btn-xs remove-item">&times;</button>
-                            <span class="pizza-name"></span> (<span class="pizza-size"></span>)
-                        </p>
-                    </div>
-                    <div class="col-xs-2 col-price">
-                        <p>$<span class="size-price"></span></p>
-                    </div>
-                </div>
+            	<!-- car item template -->
+            	<div class="cart-item-template cart-item row">
+            		<div class="col-xs-10">
+            			<p><button type="button" class="btn btn-default btn-xs remove-item">&times;</button>
+            				<span class="pizza-name"></span> (<span class="pizza-size"></span>)
+            			</p>
+            		</div>
+            		<div class="col-xs-2 col-price">
+            			<p>$<span class="size-price"></span></p>
+            		</div>
+            	</div>
 
             </div> <!-- .templates -->
 
