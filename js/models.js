@@ -39,6 +39,11 @@ var ListModel = {
         this.trigger('change');
     }, //setItems()
 
+    removeItems: function() {
+        this.items.length = 0;
+        this.trigger('change');
+    }, //removeItems()
+
     buildIndex: function() {    
         this.itemIndex = {};
         for (idx = 0; idx < this.items.length; ++idx) {

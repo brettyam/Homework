@@ -17,6 +17,7 @@ function createCartModel(config) {
 		for (idx = 0; idx < this.items.length; ++idx) {
 			subtotalPrice += this.items[idx].price;
 		}
+		console.log(subtotalPrice.toFixed(2));
 		return subtotalPrice.toFixed(2);
 	} //add getsubtotalPrice() function
 
