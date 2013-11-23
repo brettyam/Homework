@@ -111,6 +111,17 @@ $(function(){
         cartModel.removeItems();
     });
 
+    //continue button handler
+    $('.continue').click(function(){
+         var grandTotal = cartModel.getGrandTotalPrice();
+         if (grandTotal < 20) {
+            $('.alert-danger').show();
+         } else {
+            $('.alert-danger').hide();
+            $('.info-modal').modal(); 
+         }
+    });
+
     //save cart to local storage
     cartModel.on('change', function(){
         localStorage.setItem('cart', cartModel.toJSON());
