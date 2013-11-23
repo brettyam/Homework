@@ -217,23 +217,23 @@ iframe {
 	margin: 0;
 }
 
-.items {
+.menu .items {
 	padding-left: 55px;
 	padding-top: 5px;
 }
 
-.name {
+.menu .name {
 	padding-top: 0px;
 	padding-left: 55px;
 	padding-bottom: 3px;
 }
 
-.drink-menu .name,
-.dessert-menu .name {
+.menu .drink-menu .name,
+.menu .dessert-menu .name {
 	padding-top: 0px;
 }
 
-.description {
+.menu .description {
 	padding-top: 0px;
 	padding-left: 75px;
 	padding-bottom: 15px;
@@ -242,7 +242,7 @@ iframe {
 	color: gray;
 }
 
-.special {
+.menu .special {
 	font-style: italic;
 	color: red;
 }
@@ -266,28 +266,27 @@ iframe {
 
 .order h2 {
 	margin-top: 20px;
-	/*margin-bottom: 20px;*/
 	font-size: 25px;
 }
 
-.category {
+.order .category {
 	padding-left: 10px;
 }
 
-.total-row {
+.order .total-row {
 	border-top: 1px solid gray;
 }
 
-.button-row {
+.order .button-row {
 	margin-top: 2em;
 	text-align: right;
 }
 
-.pizza-template {
+.order .pizza-template {
 	padding-bottom: 80px;
 }
 
-.size-template {
+.order .size-template {
 	width: auto;
 }
 
@@ -295,44 +294,59 @@ iframe {
 	display: none;
 }
 
-.cart-col {
+.order .cart-col {
 	padding-right: 30px;
 	font-family: 'Helvetica';
+	font-size: 14px;
 }
 
-.drinks-container,
-.desserts-container {
+.order .col-price {
+	position: relative;
+	right: 10px;
+}
+
+.order .cart-footer {
+	font-size: 16px;
+}
+
+.order .cart-items-container {
+	position: relative;
+	right: 10px;
+}
+
+.order .drinks-container,
+.order .desserts-container {
 	padding-left: 20px;
 }
 
-.drink-name,
-.dessert-name {
+.order .drink-name,
+.order .dessert-name {
 	padding-left: 0px;
 	padding-top: 20px;
 	padding-bottom: 3px;
 }
 
-.menu-col {
+.order .menu-col {
 	border-right: 1px solid gray;
 }
 
-.total-string {
+.order .total-string {
 	right: 35px;
 }
 
-.grandtotal-price, .gr {
+.order .grandtotal-price, .gr {
 	font-weight: bold;
 }
 
-.pizzas-container {
+.order .pizzas-container {
 	margin-left: 20px;
 }
 
-.pizza-name {
+.order .pizza-name {
 	padding-bottom: 3px;
 }
 
-.pizza-description {
+.order .pizza-description {
 	margin-left: 5px;
 	font-style: italic;
 	font-size: 90%;

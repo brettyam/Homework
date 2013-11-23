@@ -53,9 +53,9 @@ $(function(){
         container: $('.desserts-container')
     });
 
-    pizzasModel.refresh();                 //render pizzas
-    drinksModel.refresh();                 //render drinks
-    dessertsModel.refresh();        //render desserts
+    pizzasModel.refresh();      //render pizzas
+    drinksModel.refresh();      //render drinks
+    dessertsModel.refresh();    //render desserts
 
     //remove the only alcoholic beverage from drinksModel
     var beer = drinksModel.getItemByName('Irn Bru');
@@ -66,34 +66,43 @@ $(function(){
     pizzasView.on('addToCart', function(data){
         var pizza = pizzasModel.getItemByName(data.pizzaName);
         if (!pizza) {
-                throw 'Invalid pizza.';
+            throw 'Invalid pizza.';
+        }
+        //add appropriate size label
+        var sizeLabel;
+        if (data.pizzaSize == 0) {
+            sizeLabel = " (S)";
+        } else if (data.pizzaSize == 1) {
+            sizeLabel = " (M)";
+        } else {
+            sizeLabel = " (L)";
         }
         cartModel.addItem({
-                pizzaName: data.pizzaName,
-                pizzaSize: data.pizzaSize,
-                sizePrice: pizza.prices[data.pizzaSize]
+            itemName: data.pizzaName,
+            pizzaSize: sizeLabel,
+            price: pizza.prices[data.pizzaSize]
         });
     }); //addToCart event for pizzas
 
     drinksView.on('addToCart', function(data){
         var drink = drinksModel.getItemByName(data.drinkName);
         if (!drink) {
-                throw 'Invalid drink.';
+            throw 'Invalid drink.';
         }
         cartModel.addItem({
-                name: drink.name,
-                price: drink.price
+            itemName: drink.name,
+            price: drink.price
         });
     }); //addToCart event for drinks
 
     dessertsView.on('addToCart', function(data){
         var dessert = dessertsModel.getItemByName(data.dessertName);
         if (!dessert) {
-                throw 'Invalid dessert.';
+            throw 'Invalid dessert.';
         }
         cartModel.addItem({
-                name: dessert.name,
-                price: dessert.price
+            itemName: dessert.name,
+            price: dessert.price
         });
     }); //addToCart event for desserts
 
