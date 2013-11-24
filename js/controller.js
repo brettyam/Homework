@@ -155,7 +155,7 @@ $(function(){
     });
 });
 
-//put the cart and customer information a single object
+//put the cart and customer information in a single object
 function combineInfo(customerData, cartData) {
     var finalForm = {};
     var idx;
@@ -166,6 +166,7 @@ function combineInfo(customerData, cartData) {
         finalForm.address2 = customerData.address2;
     finalForm.zip = customerData.zip;
     finalForm.phone = customerData.phone;
+    finalForm.nextUrl = 'http://students.washington.edu/brettyam/info343/Homework-4.0/';
     finalForm.items = [];
     for (idx = 0; idx < cartData.length; ++idx) {
         var item = cartData[idx];
