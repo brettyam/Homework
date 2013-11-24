@@ -314,11 +314,18 @@ iframe {
 	right: 10px;
 }
 
-.order .cart-col .alert {
+.alert-danger {
 	display: none;
+}
+
+.order .cart-col .min-alert {
 	margin-left: 25px;
 	margin-top: 30px;
 	margin-right: 15px;
+}
+
+.order .modal .field-alert {
+
 }
 
 .order .drinks-container,

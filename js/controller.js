@@ -124,9 +124,9 @@ $(function(){
     $('.continue').click(function(){
          var grandTotal = cartModel.getGrandTotalPrice();
          if (grandTotal < 20) {
-            $('.alert-danger').show();
+            $('.min-alert').show();
          } else {
-            $('.alert-danger').hide();
+            $('.min-alert').hide();
             $('.info-modal').modal(); 
          }
     });
@@ -145,8 +145,13 @@ $(function(){
         customerInfo.phone = custInfoForm.find('input[name="phone-num"]').val();
         finalInfo = combineInfo(customerInfo, cartModel.getItems());
 
-        $('#final-input').val(JSON.stringify(finalInfo));
-        $('#final').submit();
+        //make sure all fields are filled out
+        if (finalInfo.name && finalInfo.address1 && finalInfo.zip && finalInfo.phone) {
+            $('#final-input').val(JSON.stringify(finalInfo));
+            $('#final').submit();
+        } else {
+            $('.field-alert').show();
+        }
     });
 
     //save cart to local storage
