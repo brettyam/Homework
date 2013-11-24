@@ -19,6 +19,9 @@ function createPizzaView(config) {
 		var clonedSizeTemplate;
 
 		clonedTemplate.find('.pizza-name').html(this.model.name);
+		if (this.model.vegetarian) {
+			clonedTemplate.find('.vegetarian').html('(Vegetarian)');
+		}
 		clonedTemplate.find('.pizza-description').html(this.model.description);
 		for (size in this.model.prices) {
 			clonedSizeTemplate = sizeTemplate.clone();

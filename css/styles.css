@@ -354,10 +354,16 @@ iframe {
 
 .order .pizzas-container {
 	margin-left: 20px;
+	padding-top: 10px;
 }
 
 .order .pizza-name {
 	padding-bottom: 3px;
+}
+
+.order .vegetarian {
+	color: green;
+	font-weight: bold;
 }
 
 .order .pizza-description {
