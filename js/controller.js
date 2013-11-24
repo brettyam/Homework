@@ -69,17 +69,24 @@ $(function(){
             throw 'Invalid pizza.';
         }
         //add appropriate size label
-        var sizeLabel;
+        var renderLabel;
+        var postLabel;
+
         if (data.pizzaSize == 0) {
-            sizeLabel = " (S)";
+            renderLabel = " (S)";
+            postLabel = 'small';
         } else if (data.pizzaSize == 1) {
-            sizeLabel = " (M)";
+            renderLabel = " (M)";
+            postLabel = 'medium';
         } else {
-            sizeLabel = " (L)";
+            renderLabel = " (L)";
+            postLabel = 'large';
         }
         cartModel.addItem({
+            type: 'pizza',
             itemName: data.pizzaName,
-            pizzaSize: sizeLabel,
+            sizeLabel: renderLabel,
+            size: postLabel,
             price: pizza.prices[data.pizzaSize]
         });
     }); //addToCart event for pizzas
@@ -90,6 +97,7 @@ $(function(){
             throw 'Invalid drink.';
         }
         cartModel.addItem({
+            type: 'drink',
             itemName: drink.name,
             price: drink.price
         });
@@ -101,6 +109,7 @@ $(function(){
             throw 'Invalid dessert.';
         }
         cartModel.addItem({
+            type: 'dessert',
             itemName: dessert.name,
             price: dessert.price
         });
@@ -122,12 +131,56 @@ $(function(){
          }
     });
 
+    //place order button/submission handler 
+    $('.custInfoForm').submit(function(){
+        var finalInfo;
+        var custInfoForm = $(this);
+        var customerInfo = {};
+
+        customerInfo.name = custInfoForm.find('input[name="first-name"]').val() +
+                            " " + custInfoForm.find('input[name="last-name"]').val();
+        customerInfo.address1 = custInfoForm.find('input[name="addr-1"]').val();
+        customerInfo.address2 = custInfoForm.find('input[name="addr-2"]').val();
+        customerInfo.zip = custInfoForm.find('input[name="zip"]').val();
+        customerInfo.phone = custInfoForm.find('input[name="phone-num"]').val();
+        finalInfo = combineInfo(customerInfo, cartModel.getItems());
+
+        $('#final-input').val(JSON.stringify(finalInfo));
+        $('#final').submit();
+    });
+
     //save cart to local storage
     cartModel.on('change', function(){
         localStorage.setItem('cart', cartModel.toJSON());
     });
-
-    //posting
-    //$('#cart-input').val(.....json.....);
-    //$('#cart-form').submit();
 });
+
+//put the cart and customer information a single object
+function combineInfo(customerData, cartData) {
+    var finalForm = {};
+    var idx;
+
+    finalForm.name = customerData.name;
+    finalForm.address1 = customerData.address1;
+    if (customerData.address2)
+        finalForm.address2 = customerData.address2;
+    finalForm.zip = customerData.zip;
+    finalForm.phone = customerData.phone;
+    finalForm.items = [];
+    for (idx = 0; idx < cartData.length; ++idx) {
+        var item = cartData[idx];
+        if (item.type == 'pizza') {
+            finalForm.items.push({
+                'type': 'pizza',
+                'name': item.itemName,
+                'size': item.size
+            });
+        } else {
+            finalForm.items.push({
+                'type': item.type,
+                'name': item.itemName,
+            });
+        }
+    }
+    return finalForm;
+}

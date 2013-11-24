@@ -116,7 +116,7 @@
                 <div class="cart-item-template cart-item row">
                     <div class="col-xs-10">
                         <p><button type="button" class="btn btn-default btn-xs remove-item">&times;</button>
-                            <span class="itemName"></span> <span class="pizzaSize"></span>
+                            <span class="itemName"></span> <span class="sizeLabel"></span>
                         </p>
                     </div>
                     <div class="col-xs-2 col-price">
@@ -153,36 +153,38 @@
                         <h4 class="modal-title">You're almost done! Please enter your information.</h4>
                     </div>
                     <div class="modal-body">
-                        <label class="col-lg-2 control-label" for="first-name">Name</label>
-                        <div class="col-lg-5">
-                            <input type="text" class="form-control" name="first-name" id="first-name" placeholder="first name" required>
-                        </div>
-                        <div class="col-lg-5">
-                            <input type="text" class="form-control" name="last-name" id="last-name" placeholder="last name" required>
-                        </div>
-                        <label class="col-lg-2 control-label" for="addr-1">Address</label>
-                        <div class="col-lg-10">
-                            <input type="text" class="form-control" name="addr-1" id="addr-1" placeholder="street address" required>
-                            <input type="text" class="form-control" name="addr-2">
-                        </div>
-                        <label class="col-lg-2" control-label for="zip">Zip</label>
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control" name="zip" placeholder="zip code" required>
-                        </div>
-                        <label class="col-lg-2" control-label for="phone">Phone</label>
-                        <div class="col-lg-4">
-                            <input type="text" class="form-control" name="phone-num" placeholder="phone number" required>
-                        </div>
-                        <button type="button" class="btn btn-danger cancel" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success place-order">Place Order</button>
+                        <form class="custInfoForm">
+                            <label class="col-lg-2 control-label" for="first-name">Name</label>
+                            <div class="col-lg-5">
+                                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="first name" required>
+                            </div>
+                            <div class="col-lg-5">
+                                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="last name" required>
+                            </div>
+                            <label class="col-lg-2 control-label" for="addr-1">Address</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name="addr-1" id="addr-1" placeholder="street address" required>
+                                <input type="text" class="form-control" name="addr-2">
+                            </div>
+                            <label class="col-lg-2" control-label for="zip">Zip</label>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" name="zip" placeholder="zip code" required>
+                            </div>
+                            <label class="col-lg-2" control-label for="phone">Phone</label>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" name="phone-num" placeholder="phone number" required>
+                            </div>
+                            <button type="button" class="btn btn-danger cancel" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-success place-order">Place Order</button>
+                        </form>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
         <!-- POSTING -->
-        <form action="http://dawgpizza.com/order/" method="POST">
-            <input id="cart-input" type="hidden" name="cart">
+        <form id="final" action="http://dawgpizza.com/orders/" method="POST" role="form">
+            <input id="final-input" type="hidden" name="cart">
         </form>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
