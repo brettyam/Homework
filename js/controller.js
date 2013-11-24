@@ -132,9 +132,9 @@ $(function(){
     });
 
     //place order button/submission handler 
-    $('.custInfoForm').submit(function(){
+    $('.place-order').click(function(){
         var finalInfo;
-        var custInfoForm = $(this);
+        var custInfoForm = $('.custInfoForm');
         var customerInfo = {};
 
         customerInfo.name = custInfoForm.find('input[name="first-name"]').val() +
