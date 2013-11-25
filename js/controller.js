@@ -45,13 +45,13 @@ $(function(){
         model: drinksModel,
         template: $('.drink-template'),
         container: $('.drinks-container')
-    });
+    }); //var drinksView
 
     var dessertsView = createDessertsView({
         model: dessertsModel,
         template: $('.dessert-template'),
         container: $('.desserts-container')
-    });
+    }); //var dessertsView
 
     pizzasModel.refresh();      //render pizzas
     drinksModel.refresh();      //render drinks
@@ -123,6 +123,7 @@ $(function(){
     //continue button handler
     $('.continue').click(function(){
          var grandTotal = cartModel.getGrandTotalPrice();
+         //make sure the customer is spending at least $20
          if (grandTotal < 20) {
             $('.min-alert').show();
          } else {
